@@ -1,0 +1,63 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="">
+	    		<table id="contactsTable" class="display nowrap" cellspacing="0" width="100%">
+			  		<thead>
+						<tr>
+							<th >#</th>
+							<th >Name</th>
+							<th >Group</th>
+							<th >Contact Type</th>
+							<th >Created - Date</th>
+							<th >Created - Time</th>
+							<th >Modified - Date</th>
+							<th >Modified - Time</th>
+							<th >Entries</th>
+							<th >Notes</th>
+							<th >Organization</th>
+							<th >Addresses</th>
+							<th >Last Time Contacted - Date</th>
+							<th >Last Time Contacted - Time</th>
+							<th >Times Contacted</th>
+							<th >Source</th>
+							<th >Deleted</th>
+							<th >Tag Note</th>
+							<th >Link #1</th>
+							<th >Link #2</th>
+							<th >Carved</th>
+							<th >Manually Decoded</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="ch in ContactsArr">
+				      		<th>{{$index + 1}}</th>
+							<td>{{ch.name}}</td>
+							<td>{{ch.group}}</td>
+							<td>{{ch.contactType}}</td>
+							<td>{{ch.createdDate}}</td>
+							<td>{{ch.createdTime}}</td>
+							<td>{{ch.modifiedDate}}</td>
+							<td>{{ch.modifiedTime}}</td>
+							<td>{{ch.entries}}</td>
+							<td>{{ch.notes}}</td>
+							<td>{{ch.organization}}</td>
+							<td>{{ch.addresses}}</td>
+							<td>{{ch.lasttimeContactedDate}}</td>
+							<td>{{ch.lasttimeContactedTime}}</td>
+							<td>{{ch.timesContacted}}</td>
+							<td>{{ch.source}}</td>
+							<td>{{ch.deleted}}</td>
+							<td>{{ch.tagNote}}</td>
+							<td>{{ch.link1}}</td>
+							<td>{{ch.link2}}</td>
+							<td>{{ch.carved}}</td>
+							<td>{{ch.manuallyDecoded ? 'Yes' : 'No'}}</td>
+						</tr>
+				  </tbody>
+		  		</table>
+			</div>
+		</div>
+	</div>	
+</div>

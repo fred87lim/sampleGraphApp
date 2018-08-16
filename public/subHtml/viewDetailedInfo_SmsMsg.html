@@ -1,0 +1,49 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="">
+	    		<table id="smsMsgTable" class="display nowrap" cellspacing="0" width="100%">
+			  		<thead>
+						<tr>
+							<th >#</th>
+							<th >Country</th>
+							<th >Network Code</th>
+							<th >Network Name</th></th>
+							<th >Parties</th>
+							<th >Date</th>
+							<th >Time</th>
+							<th >Duration</th>
+							<th >Call Type</th>
+							<th >Video Call</th>
+							<th >Source</th>
+							<th >Deleted</th>
+							<th >Tag Note</th>
+							<th >Carved</th>
+							<th >Manually Decoded</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="cl in CallLogArr">
+				      		<th>{{$index + 1}}</th>
+							<td>{{cl.country}}</td>
+							<td>{{cl.networkCode}}</td>
+							<td>{{cl.networkName}}</td>
+							<td>{{cl.parties}}</td>
+							<td>{{cl.date}}</td>
+							<td>{{cl.time}}</td>
+							<td>{{cl.duration}}</td>
+							<td>{{cl.callType}}</td>
+							<td>{{cl.videoCall}}</td>
+							<td>{{cl.source}}</td>
+							<td>{{cl.deleted}}</td>
+							<td>{{cl.tagNote}}</td>
+							<td>{{cl.carved}}</td>
+							<td>{{cl.manuallyDecoded ? 'Yes' : 'No'}}</td>
+						</tr>
+				  </tbody>
+		  		</table>
+			</div>
+		</div>
+	</div>	
+</div>

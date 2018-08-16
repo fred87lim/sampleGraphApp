@@ -1,0 +1,34 @@
+<div class="row bottomBorder" style="margin-bottom:15px">
+	<h5 class="nodeEdgeDetailFont">Details</h5>
+</div>
+<div class="row" ng-show="nodeOrEdgeDetail.isNode" >
+	<div class="col-sm-12 " style="margin-left:0; padding-left:0;">
+		<p class="nodeEdgeDetailFont " style="padding-left:0px; margin-left:0px">Telephone: <br><span>{{nodeOrEdgeDetail.data.contact_no}}</span></p>
+		<p class="nodeEdgeDetailFont" style="padding-left:0px; margin-left:0px">Name: <br><span>{{nodeOrEdgeDetail.data.name !=null ? nodeOrEdgeDetail.data.name : 'Tan Kok Heng'}}</span></p>
+
+		<p class="nodeEdgeDetailFont " style="padding-left:0px; margin-left:0px">Last Call: <br>
+			<span class="detailIcon detailClockIcon">08-01-2018 13:03 </span><br>
+			<span class="detailIcon detailCallIcon">83943213</span>
+		</p>
+
+		<p class="nodeEdgeDetailFont" style="padding-left:0px; margin-left:0px; ">Call Logs:
+			<br>
+			<span class="bottomBorderDetail" style=""></span>
+			<span class="detailIcon detailClockIcon">08-01-2018 13:03 </span><br>
+			<span class="detailIcon detailCallIcon">83943213</span>
+			<br>
+			<span class="bottomBorderDetail" style=""></span>
+			<span class="detailIcon detailClockIcon" style="margin-top:30px !important;">06-01-2018 19:48 </span><br>
+			<span class="detailIcon detailCallIcon">94532575</span>
+			<br>
+			<span class="bottomBorderDetail" style=""></span>
+			<span class="detailIcon detailClockIcon">17-12-2017 11:22 </span><br>
+			<span class="detailIcon detailCallIcon">87535422</span>
+			<br>
+			<span class="bottomBorderDetail" style=""></span>
+		</p>
+	</div>
+	<div class="col-sm-12 " style="margin-top:10px; margin-left:0; padding-left:0;"">
+		<div class="btn btn-info btn-block" ng-click="ViewDetailedInfo()">View More</div>
+	</div>
+</div>

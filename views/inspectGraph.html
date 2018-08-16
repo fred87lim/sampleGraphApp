@@ -1,0 +1,131 @@
+<html ng-app="inspectGraphApp" >
+<head>
+	<base href="/">
+	<!-- Necessary because we have compatibility mode set for localhost in our IE 11 browser. 
+		If we do not include this, then we will get error on jQuery that 'object doesn't support addEventListener()..''
+	-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>Link Chart - Inspect Graph</title>
+
+	<!-- Boot Strap -->
+	<link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+
+    <script src="javascripts/jquery-3.2.1.min.js"></script>
+	<!-- <script src="javascripts/jquery-3.2.1.slim.min.js"></script> -->
+	<script src="javascripts/popper.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+
+
+	<script src="/vis_scripts/vis.js"></script>
+	<link href="/vis_scripts/vis.css" rel="stylesheet" type="text/css" />
+	<link href="/vis_scripts/vis-network.min.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="/vis_scripts/vis-network-edited.css" rel="stylesheet" type="text/css" /> -->
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
+
+	<script src="javascripts/angular.min.js"></script>
+	<script src="javascripts/inspectGraphApp.js"></script>
+	<script src="javascripts/graphSvc.js"></script>
+	<script src="javascripts/notificationCtrl.js"></script>
+
+	<script src="javascripts/jquery.dataTables.min.js"></script>
+	<link href="stylesheets/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- Sample data for demo purpose -->
+	<script src="sampleData/callLogsSampleData.js"></script>
+	<script src="sampleData/chatsSampleData.js"></script>
+	<script src="sampleData/contactsSampleData.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			console.log("tab toggle triggered");
+		   $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+		});
+	</script>
+</head>
+
+<body ng-controller="inspectGraphCtrl" class="container-fluid" ng-cloak>
+	<div ng-include="'subHtml/notification_msg.html'"></div>
+
+	<div id="mainRow"  class="row">
+		<div id="leftPanel" class="col-md-2">
+			<div ng-include="'subHtml/leftSideBar.html'"></div>
+		</div>
+		<div id="centerPanel" class="col-md-8">
+			<div id="graphPanel" class="row" >
+				<div class="col-md-12 bottomBorder" style="padding-bottom: 15px">
+					<div class="row">
+						<!-- <p>Functions like 'animation toggle' etc here </p> -->
+						<div class="col-md-4" style="margin-right: 0px; padding-right:5px">
+							<input ng-model="telephoneToFind" type="text" class="form-control" 
+									placeholder="Enter tel. to focus to it" >
+						</div>
+						<div class="col-md-8" style="padding-left:0px; margin-left:0px">
+							<div class="btn btn-primary btnWithIcon btnFocus" ng-click="FocusViewToNode(telephoneToFind)">Focus</div>
+							<div id="btnFit" class="btn btn-info btnWithIcon btnFit" ng-click="FitGraphToView()">Fit</div>
+							<!-- <div class="btn btn-info" ng-click="RefreshGraphFromDatabase()">Refresh</div> -->
+							<div class="btn btn-info" ng-click="ChangePhysicsState()">Toggle Physics</div>
+							<!-- <div class="btn btn-primary" ng-click="EnquirePos()">Enquire Pos</div> -->
+							<!-- <div class="btn btn-info" ng-click="ChangeGraphPositions()">Toggle Positions</div> -->
+							
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="col-md-12" style="position:absolute; bottom:0px; left:0px; z-index: 1">
+					<div class="row">
+						<div class="col-md-8"></div>
+						<div class="col-md-4">
+							<div class="slidecontainer">
+								<input class="slider" type="range" ng-change="gravitConstChange()" ng-model="gravitConst" min="0" max="100" value="50"  style="margin:0px; padding:0px">
+							</div>
+							<p style="margin:auto; background-color:none; text-align: center; font-size:12px; font-style:italic; margin-top:-10px">Slide to adjust dist.</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="graphRender" class="col-md-12" style="height:90%"></div>
+			</div>
+		</div>
+		<div id="rightPanel" class="col-md-2">
+			<div ng-include="'subHtml/rightSideBar.html'"></div>
+		</div>
+
+		<!-- Modals -->
+		<div id="modalInspectNode" class="modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					    <h5 class="modal-title">Inspection</h5>
+					    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					      <span aria-hidden="true">&times;</span>
+					    </button>
+					</div>
+					<div class="modal-body">
+					    <p>Do you wish to inspect this node and view it as another graph?</p>
+					</div>
+					<div class="modal-footer">
+					    <button type="button"  ng-click="InspectNode()" class="btn btn-primary">Yes</button>
+					    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-include="'subHtml/viewDetailedInfoModal.html'" ></div>
+	</div>
+
+	<script>
+		
+		// ** Important **
+		// Automatically resize the columns of the tables when the tab changes
+		$(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
+		    console.log("Tab changed");
+		    // resize accordingly.
+		    $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="">
+	    		<table id="chatsTable" class="display nowrap" cellspacing="0" width="100%">
+			  		<thead>
+						<tr>
+							<th >#</th>
+							<th >Chat #</th>
+							<th >Identifier</th>
+							<th >Start Time: Date</th></th>
+							<th >Start Time: Time</th>
+							<th >Last Activity: Date</th>
+							<th >Last Activity: Time</th>
+							<th >Participants</th>
+							<th >Number of Attachments</th>
+							<th >Source</th>
+							<th >Deleted - Chat</th>
+							<th >Tag Note - Chat</th>
+							<th >Carved</th>
+							<th >Manually Decoded</th>
+							<th >Instant Message</th>
+							<th >From</th>
+							<th >To</th>
+							<th >Participants Timestamp</th>
+							<th >Subject</th>
+							<th >Body</th>
+							<th >Status</th>
+							<th >Platform</th>
+							<th >Location</th>
+							<th >Timestamp: Date</th>
+							<th >Timestamp: Time</th>
+							<th >Delivered: Date</th>
+							<th >Delivered: Time</th>
+							<th >Read: Date</th>
+							<th >Read: Time</th>
+							<th >Attachment #1</th>
+							<th >Attachment #1 - Details</th>
+							<th >Attachment #2</th>
+							<th >Attachment #2 - Details</th>
+							<th >Attachment #3</th>
+							<th >Attachment #3 - Details</th>
+							<th >Attachment #4</th>
+							<th >Attachment #4 - Details</th>
+							<th >Attachment #5</th>
+							<th >Attachment #5 - Details</th>
+							<th >Attachment #6</th>
+							<th >Attachment #6 - Details</th>
+							<th >Attachment #7</th>
+							<th >Attachment #7 - Details</th>
+							<th >Attachment #8</th>
+							<th >Attachment #8 - Details</th>
+							<th >Attachment #9</th>
+							<th >Attachment #9 - Details</th>
+							<th >Attachment #10</th>
+							<th >Attachment #10 - Details</th>
+							<th >Deleted - Instant Message</th>
+							<th >Tag Note - Instant Message</th>
+							<th >Starred Message</th>
+							<th >Message Carved</th>
+							<th >Message Manually Decoded</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="ch in ChatsArr">
+				      		<th>{{$index + 1}}</th>
+							<td>{{ch.chatNo}}</td>
+							<td>{{ch.identifier}}</td>
+							<td>{{ch.startTimeDate}}</td>
+							<td>{{ch.startTimeTime}}</td>
+							<td>{{ch.lastActDate}}</td>
+							<td>{{ch.lastActTime}}</td>
+							<td>{{ch.participants}}</td>
+							<td>{{ch.noOfAttachments}}</td>
+							<td>{{ch.source}}</td>
+							<td>{{ch.deletedChat}}</td>
+							<td>{{ch.tagNoteChat}}</td>
+							<td>{{ch.carved}}</td>
+							<td>{{ch.manuallyDecoded ? 'Yes' : 'No'}}</td>
+							<td>{{ch.instantMsgNo}}</td>
+							<td>{{ch.from}}</td>
+							<td>{{ch.to}}</td>
+							<td>{{ch.participantsTimestamps}}</td>
+							<td>{{ch.subject}}</td>
+							<td>{{ch.body}}</td>
+							<td>{{ch.status}}</td>
+							<td>{{ch.platform}}</td>
+							<td>{{ch.location}}</td>
+							<td>{{ch.timestampDate}}</td>
+							<td>{{ch.timestampTime}}</td>
+							<td>{{ch.deliveredDate}}</td>
+							<td>{{ch.deliveredTime}}</td>
+							<td>{{ch.readDate}}</td>
+							<td>{{ch.readTime}}</td>
+							<td>{{ch.attachNo1}}</td>
+							<td>{{ch.attachNo1Details}}</td>
+							<td>{{ch.attachNo2}}</td>
+							<td>{{ch.attachNo2Details}}</td>
+							<td>{{ch.attachNo3}}</td>
+							<td>{{ch.attachNo3Details}}</td>
+							<td>{{ch.attachNo4}}</td>
+							<td>{{ch.attachNo4Details}}</td>
+							<td>{{ch.attachNo5}}</td>
+							<td>{{ch.attachNo5Details}}</td>
+							<td>{{ch.attachNo6}}</td>
+							<td>{{ch.attachNo6Details}}</td>
+							<td>{{ch.attachNo7}}</td>
+							<td>{{ch.attachNo7Details}}</td>
+							<td>{{ch.attachNo8}}</td>
+							<td>{{ch.attachNo8Details}}</td>
+							<td>{{ch.attachNo9}}</td>
+							<td>{{ch.attachNo9Details}}</td>
+							<td>{{ch.attachNo10}}</td>
+							<td>{{ch.attachNo10Details}}</td>
+							<td>{{ch.deletedInstantMsg}}</td>
+							<td>{{ch.tagNodeInstantMsg}}</td>
+							<td>{{ch.starredMsg}}</td>
+							<td>{{ch.messageCarved}}</td>
+							<td>{{ch.msgManuallyDecoded}}</td>
+						</tr>
+				  </tbody>
+		  		</table>
+			</div>
+		</div>
+	</div>	
+</div>

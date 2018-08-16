@@ -1,0 +1,347 @@
+body {
+  /*padding: 50px;*/
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  /*margin:0px;
+  padding:0px;*/
+  /*background-color: #BBBBBB;*/
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+	font-size: 15px
+}
+
+.bottomBorder {
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-bottom-color: #BBBBBB;
+}
+
+.bottomBorderDetail {
+	position:absolute; 
+	width:100%;
+
+	margin-top:10px;
+
+	/*border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-bottom-color: #888888;*/
+}
+
+.btn-primary {
+	background-color:#00B7FF;
+	border:none;
+}
+
+.btnWithIcon:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top:3px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+
+.btnFit:before{
+	background-image:url('../images/Fit.png');
+}
+
+.btnFocus:before{
+	background-image: url('../images/myAimIcon2.png');
+}
+
+.btnFindConn:before{
+	background-image: url('../images/search.png');
+}
+
+.detailIcon:before{
+	content: "";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top:5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+
+.detailClockIcon:before {
+	background-image: url('../images/Clock.png');
+}
+
+.detailCallIcon:before {
+	background-image: url('../images/call.png');
+}
+
+.inputConnTel {
+	width: 180px;
+}
+
+.linkInLeftSideBar {
+	font-size: 15px;
+}
+
+.modal-dialog {
+  width: 1000px;
+}
+
+.nodeEdgeDetailFont{
+	font-size: 15px;
+	color: #EEEEEE;
+	/*font-weight: 500;*/
+}
+
+.nodeEdgeDetailFont span {
+	/*font-weight: 400;*/
+	/*color: white;*/
+	color: #00B7FF;
+}
+
+/*.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:black;
+    background-color:red !important;
+}*/
+
+.progress-bar {
+	background-color:#00B7FF;
+
+}
+
+.slidecontainer {
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    height:30px;
+}
+
+/*.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}*/
+
+/*.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::ms-thumb {
+	border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #4CAF50;
+}*/
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0 0;
+  width: 100%;
+	opacity: 0.75;
+}
+input[type=range]:focus {
+  outline: none;
+	/*opacity: 1;*/
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #eeeeee;
+  /*border: 0.2px solid #000000;*/
+  border-radius: 5px;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+input[type=range]::-ms-fill-upper {
+  background: #eeeeee;
+  /*border: 0.2px solid #000000;*/
+  border-radius: 5px;
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+}
+input[type=range]::-ms-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  border: 1px solid #00B7FF;
+  height: 26px;
+  width: 12px;
+  border-radius: 3px;
+  background: #00B7FF;
+  cursor: pointer;
+}
+
+/*input[type=range]::hover {
+	opacity: 1;
+}*/
+
+.textLoadGraph{
+	position:absolute; 
+	/*z-index: 1;*/
+	margin:auto;
+	width:100%;
+	text-align: center;
+	height:70%;
+}
+
+.textLoadGraph h4{
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.textLoadGraph .progress{
+	margin: 0;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#connSearchPanel {
+	margin-bottom: 8px; 
+	background-color: #444444; 
+	padding-top:10px; 
+	box-shadow: 3px 3px 8px #888888;
+}
+
+#graphRender {
+	/*background-color: #EEEEEE;*/
+}
+
+#graphPanel {
+	background-color: white;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#leftPanel {
+	background-color: #333333;
+	padding:20px;
+}
+
+#rightPanel {
+	background-color: #666666;
+	padding:20px;
+	padding-left:30px;
+}
+
+#centerPanel {
+	/*padding-left:20px; 
+	padding-right:20px;*/
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:40px;
+	padding-right:40px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+
+     /* Set height to 100% else the view will shrink when the graph is not loaded */
+     html, body {
+     	height:100%;
+     }
+
+     #mainRow{
+		height:100%;	
+	}
+
+     #centerPanel {
+     	height:100%;
+     }
+
+     #graphPanel {
+     	height:91%;
+     }
+
+	#graphRender{
+		/*height:300px !important;*/
+		/*height:570px !important;*/
+		height:100% !important;
+	}
+}

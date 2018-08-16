@@ -1,0 +1,59 @@
+
+<div id="modalViewDetailedInfo" class="modal" tabindex="-1" roles="dialog" >
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			    <h5 class="modal-title">Detailed Info</h5>
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			      <span aria-hidden="true">&times;</span>
+			    </button>
+			</div>
+			<div class="modal-body">
+			    <ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="callLog-tab" data-toggle="tab" href="#callLog" role="tab" aria-controls="callLog" aria-selected="true">Call Log</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats" role="tab" aria-controls="chats" aria-selected="false">Chats</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab"  aria-controls="contacts" aria-selected="false">Contacts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="emails-tab" data-toggle="tab" href="#emails" role="tab"  aria-controls="emails" aria-selected="false">Emails</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="mms_msg-tab" data-toggle="tab" href="#mms_msg" role="tab"  aria-controls="mms_msg" aria-selected="false">MMS Messages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="sms_msg-tab" data-toggle="tab" href="#sms_msg" role="tab"  aria-controls="sms_msg" aria-selected="false">SMS Messages</a>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane show active" id="callLog" role="tabpanel" aria-labelledby="callLog-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_CallLog.html'"></div>
+					</div>
+					<div class="tab-pane show " id="chats" role="tabpanel" aria-labelledby="chats-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_Chats.html'"></div>
+					</div>
+					<div class="tab-pane" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_Contacts.html'"></div>
+					</div>
+					<div class="tab-pane" id="emails" role="tabpanel" aria-labelledby="emails-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_Emails.html'"></div>
+					</div>
+					<div class="tab-pane" id="mms_msg" role="tabpanel" aria-labelledby="mms_msg-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_MmsMsg.html'"></div>
+					</div>
+					<div class="tab-pane" id="sms_msg" role="tabpanel" aria-labelledby="sms_msg-tab">
+						<div ng-include="'subHtml/viewDetailedInfo_SmsMsg.html'"></div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+			    <!-- <button type="button"  ng-click="InspectNode()" class="btn btn-primary">Yes</button> -->
+			    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
